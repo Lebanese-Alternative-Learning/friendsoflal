@@ -3,6 +3,8 @@ import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import WhyLAL from "@/components/sections/WhyLAL";
 import Impact from "@/components/sections/Impact";
+import WhyDonate from "@/components/sections/WhyDonate";
+import Stories from "@/components/sections/Stories";
 import GetInvolved from "@/components/sections/GetInvolved";
 import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/sections/Footer";
@@ -14,8 +16,10 @@ const Index = () => {
       <main className="flex-1">
         <Hero />
         <About />
-        <WhyLAL />
         <Impact />
+        <WhyLAL />
+        <WhyDonate />
+        <Stories />
         <GetInvolved />
         <FAQ />
       </main>
