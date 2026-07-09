@@ -49,8 +49,7 @@ const Navbar = () => {
             aria-expanded={open}
             className="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-full text-brand-grey hover:bg-brand-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-magenta"
           >
-            {open ? <Menu className="h-5 w-5" /> : <X className="h-5 w-5" />}
-            {open ? <X className="h-5 w-5 -ml-5" /> : null}
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
       </nav>
