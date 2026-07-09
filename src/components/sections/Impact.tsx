@@ -1,13 +1,17 @@
+import { Users, GraduationCap, School, PlayCircle, Heart, Globe } from "lucide-react";
+
 const stats = [
-  { value: "1,200+", label: "Digital Lessons" },
-  { value: "Thousands", label: "of Learners Reached" },
-  { value: "Multiple", label: "Countries" },
-  { value: "K–12", label: "Coverage" },
+  { value: "68,000+", label: "Learners Reached", Icon: Users },
+  { value: "3,000+", label: "Educators Trained", Icon: GraduationCap },
+  { value: "50+", label: "Schools & Learning Spaces Supported", Icon: School },
+  { value: "1,200+", label: "Digital Lessons Available", Icon: PlayCircle },
+  { value: "12+", label: "Years of Impact", Icon: Heart },
+  { value: "10+", label: "Countries Engaged", Icon: Globe },
 ];
 
 const Impact = () => {
   return (
-    <section className="bg-brand-blue/60 section-padding">
+    <section className="bg-brand-blue/40 section-padding">
       <div className="container-narrow">
         <div className="text-center">
           <p className="eyebrow">LAL's Impact So Far</p>
@@ -16,18 +20,19 @@ const Impact = () => {
           </h2>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
-          {stats.map((stat) => (
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-5">
+          {stats.map(({ value, label, Icon }) => (
             <div
-              key={stat.label}
-              className="bg-background rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow text-center"
+              key={label}
+              className="bg-background rounded-2xl p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col"
             >
-              <div className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-brand-magenta leading-tight">
-                {stat.value}
+              <div className="text-2xl md:text-3xl font-extrabold text-brand-magenta leading-tight">
+                {value}
               </div>
-              <div className="mt-3 text-sm md:text-base font-semibold text-brand-grey">
-                {stat.label}
+              <div className="mt-2 text-sm font-semibold text-brand-grey leading-snug flex-1">
+                {label}
               </div>
+              <Icon className="mt-4 h-8 w-8 text-brand-magenta" strokeWidth={1.75} aria-hidden="true" />
             </div>
           ))}
         </div>
