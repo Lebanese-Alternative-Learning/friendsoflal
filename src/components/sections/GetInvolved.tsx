@@ -47,7 +47,7 @@ const GetInvolved = () => {
                 <span className="h-14 w-14 rounded-full bg-brand-magenta/10 flex items-center justify-center transition-colors group-hover:bg-brand-magenta/20">
                   <Icon className="h-6 w-6 text-brand-magenta" strokeWidth={1.75} aria-hidden="true" />
                 </span>
-                <span className="mt-3 text-sm font-bold text-brand-grey leading-snug">
+                <span className="mt-3 text-sm font-bold text-brand-grey leading-snug md:whitespace-nowrap">
                   {label}
                 </span>
               </button>
@@ -79,7 +79,7 @@ const GetInvolved = () => {
               />
               <button
                 type="submit"
-                className="rounded-full bg-brand-magenta px-6 py-3 font-bold text-primary-foreground shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-magenta focus-visible:ring-offset-2"
+                className="rounded-full bg-brand-magenta px-7 py-3 font-bold text-primary-foreground shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-magenta focus-visible:ring-offset-2 whitespace-nowrap"
               >
                 Notify Me
               </button>

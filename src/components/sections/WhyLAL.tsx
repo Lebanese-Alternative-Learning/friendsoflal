@@ -35,7 +35,7 @@ const WhyLAL = () => {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[245px_1fr] lg:gap-8 xl:gap-10 lg:items-start">
           <div>
             <p className="eyebrow">Why LAL</p>
-            <h2 className="mt-4 text-3xl md:text-4xl font-extrabold text-brand-grey leading-tight">
+            <h2 className="mt-4 text-3xl font-extrabold text-brand-grey leading-tight">
               Education That Continues—No Matter What.
             </h2>
             <p className="mt-6 text-sm md:text-base text-brand-grey/85 leading-relaxed">
