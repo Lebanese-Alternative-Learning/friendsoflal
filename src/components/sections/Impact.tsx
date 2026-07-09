@@ -11,33 +11,33 @@ const stats = [
 
 const Impact = () => {
   return (
-    <section className="bg-brand-blue/40 section-padding">
+    <section id="impact" className="bg-brand-blue/40 py-14 px-6 md:py-16 md:px-8 scroll-mt-20">
       <div className="container-narrow">
         <div className="text-center">
           <p className="eyebrow">LAL's Impact So Far</p>
-          <h2 className="mt-4 text-3xl md:text-5xl font-extrabold text-brand-grey">
+          <h2 className="mt-3 text-3xl md:text-4xl font-extrabold text-brand-grey">
             Real Reach, Real Learners.
           </h2>
         </div>
 
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-5">
+        <div className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4">
           {stats.map(({ value, label, Icon }) => (
             <div
               key={label}
-              className="bg-background rounded-2xl p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col"
+              className="min-h-[150px] rounded-2xl bg-background p-4 md:p-5 shadow-sm transition-shadow hover:shadow-md flex flex-col items-center text-center"
             >
               <div className="text-2xl md:text-3xl font-extrabold text-brand-magenta leading-tight">
                 {value}
               </div>
-              <div className="mt-2 text-sm font-semibold text-brand-grey leading-snug flex-1">
+              <div className="mt-2 min-h-[34px] text-xs md:text-sm font-extrabold text-brand-grey leading-snug">
                 {label}
               </div>
-              <Icon className="mt-4 h-8 w-8 text-brand-magenta" strokeWidth={1.75} aria-hidden="true" />
+              <Icon className="mt-auto h-9 w-9 text-brand-magenta" strokeWidth={1.65} aria-hidden="true" />
             </div>
           ))}
         </div>
 
-        <p className="mt-10 text-center text-sm text-brand-grey/80">
+        <p className="mt-6 text-center text-xs text-brand-grey/80">
           All programs funded through donor support.
         </p>
       </div>
