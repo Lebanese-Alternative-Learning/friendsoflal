@@ -22,11 +22,11 @@ const GetInvolved = () => {
   };
 
   return (
-    <section id="donate" className="bg-brand-soft/30 section-padding scroll-mt-20">
+    <section id="donate" className="bg-brand-blue/40 py-14 px-6 md:py-16 md:px-8 scroll-mt-20">
       <div className="container-narrow">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[245px_1fr_1px_310px] gap-10 lg:gap-8 xl:gap-10 items-center">
           {/* Heading */}
-          <div className="lg:col-span-3">
+          <div>
             <p className="eyebrow">Get Involved</p>
             <h2 className="mt-4 text-3xl md:text-4xl font-extrabold text-brand-grey leading-tight">
               Be Part of the Change.
@@ -37,7 +37,7 @@ const GetInvolved = () => {
           </div>
 
           {/* Ways to help */}
-          <div className="lg:col-span-5 grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
             {ways.map(({ Icon, label }) => (
               <button
                 key={label}
@@ -54,8 +54,10 @@ const GetInvolved = () => {
             ))}
           </div>
 
+          <div aria-hidden="true" className="hidden lg:block h-36 w-px bg-brand-grey/25" />
+
           {/* Subscribe */}
-          <div className="lg:col-span-4 lg:border-l lg:border-brand-grey/20 lg:pl-8">
+          <div>
             <p className="text-sm text-brand-grey/85 leading-relaxed">
               Stay connected. Get updates on our work, stories from the field, and ways to get involved.
             </p>
@@ -77,7 +79,7 @@ const GetInvolved = () => {
               />
               <button
                 type="submit"
-                className="rounded-full bg-brand-magenta px-6 py-3 font-bold text-white shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-magenta focus-visible:ring-offset-2"
+                className="rounded-full bg-brand-magenta px-6 py-3 font-bold text-primary-foreground shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-magenta focus-visible:ring-offset-2"
               >
                 Notify Me
               </button>
