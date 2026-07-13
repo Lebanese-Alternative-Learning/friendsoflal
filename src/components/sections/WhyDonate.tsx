@@ -28,15 +28,15 @@ const WhyDonate = () => {
   return (
     <section id="why-donate" className="bg-brand-soft/60 py-14 px-6 md:py-16 md:px-8 scroll-mt-20">
       <div className="container-narrow">
-        <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-10 lg:gap-12 items-center">
-          <div className="rounded-2xl overflow-hidden shadow-md lg:h-[250px]">
+        <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-10 lg:gap-12 items-stretch">
+          <div className="rounded-2xl overflow-hidden shadow-md">
             <img
               src={boyTablet}
               alt="A Lebanese student learning on a tablet"
               width={1024}
               height={768}
               loading="lazy"
-              className="w-full h-full object-cover aspect-[4/3]"
+              className="w-full h-full object-cover min-h-[280px] lg:min-h-full aspect-[4/3] lg:aspect-auto"
             />
           </div>
 
