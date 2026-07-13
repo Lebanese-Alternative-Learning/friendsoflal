@@ -2,6 +2,7 @@ import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import WhyLAL from "@/components/sections/WhyLAL";
+import HowModel from "@/components/sections/HowModel";
 import Impact from "@/components/sections/Impact";
 import WhyDonate from "@/components/sections/WhyDonate";
 import Stories from "@/components/sections/Stories";
@@ -18,6 +19,7 @@ const Index = () => {
         <About />
         <Impact />
         <WhyLAL />
+        <HowModel />
         <WhyDonate />
         <Stories />
         <GetInvolved />
