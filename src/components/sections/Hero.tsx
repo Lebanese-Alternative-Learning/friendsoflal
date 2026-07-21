@@ -32,7 +32,9 @@ const Hero = () => {
 
           <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="#donate"
+              href="https://buy.stripe.com/6oUdR82Za3TX8Rv5Ys3cc00"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-brand-magenta px-8 py-4 text-base md:text-lg font-bold text-white shadow-md transition-all hover:shadow-xl hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-magenta focus-visible:ring-offset-2"
             >
               {resolve(data, "hero-cta-primary", "Support Our Work")}
