@@ -115,6 +115,13 @@
   transition: filter 0.4s ease, color 0.4s ease;
   -webkit-background-clip: border-box;
   background-clip: border-box;
+
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 4px, black calc(100% - 4px), transparent),
+                      linear-gradient(to right, transparent, black 4px, black calc(100% - 4px), transparent);
+  mask-image: linear-gradient(to bottom, transparent, black 4px, black calc(100% - 4px), transparent),
+              linear-gradient(to right, transparent, black 4px, black calc(100% - 4px), transparent);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
 }
 
 [data-content-loading="true"] :is(svg, img) {
