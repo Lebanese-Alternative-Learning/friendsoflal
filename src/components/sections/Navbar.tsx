@@ -40,7 +40,9 @@ const Navbar = () => {
 
         <div className="flex items-center gap-2">
           <a
-            href="#donate"
+            href="https://buy.stripe.com/6oUdR82Za3TX8Rv5Ys3cc00"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full bg-brand-magenta px-5 py-2.5 md:px-6 md:py-3 text-sm md:text-base font-bold text-white shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-magenta focus-visible:ring-offset-2"
           >
             {resolve(data, "nav-donate", "Donate")}
