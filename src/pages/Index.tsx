@@ -9,10 +9,17 @@ import Stories from "@/components/sections/Stories";
 import GetInvolved from "@/components/sections/GetInvolved";
 import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/sections/Footer";
+import { useSiteData } from "@/context/SiteDataContext";
 
 const Index = () => {
+  const data = useSiteData();
+  const isLoading = data === null;
+
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div
+      className="min-h-screen flex flex-col bg-background"
+      data-content-loading={isLoading ? "true" : "false"}
+    >
       <Navbar />
       <main className="flex-1">
         <Hero />
