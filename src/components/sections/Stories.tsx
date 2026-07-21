@@ -1,8 +1,12 @@
 import { Play } from "lucide-react";
 import talaPortrait from "@/assets/tala-portrait.jpg";
 import mediaThumb from "@/assets/media-thumb.jpg";
+import { useSiteData } from "@/context/SiteDataContext";
+import { resolve } from "@/utils/dataLoader";
 
 const Stories = () => {
+  const data = useSiteData();
+
   return (
     <section id="stories" className="bg-background py-14 px-6 md:py-16 md:px-8 scroll-mt-20">
       <div className="container-narrow">
@@ -10,18 +14,18 @@ const Stories = () => {
           {/* Stories */}
           <div className="grid grid-cols-1 gap-7 md:grid-cols-[180px_1fr] md:items-center">
             <div>
-              <p className="eyebrow">Stories</p>
+              <p className="eyebrow">{resolve(data, "stories-eyebrow", "Stories")}</p>
               <h2 className="mt-4 text-2xl md:text-3xl font-extrabold text-brand-grey leading-tight">
-                Real Stories. Real Change.
+                {resolve(data, "stories-heading", "Real Stories. Real Change.")}
               </h2>
               <p className="mt-5 text-sm text-brand-grey/85 leading-relaxed">
-                Meet the learners, teachers, and communities whose lives are being transformed through education.
+                {resolve(data, "stories-description", "Meet the learners, teachers, and communities whose lives are being transformed through education.")}
               </p>
               <a
                 href="#"
                 className="mt-5 inline-flex items-center gap-1 text-sm font-bold text-brand-magenta hover:underline underline-offset-4"
               >
-                Read Their Stories <span aria-hidden="true">→</span>
+                {resolve(data, "stories-cta", "Read Their Stories")} <span aria-hidden="true">→</span>
               </a>
             </div>
 
@@ -36,16 +40,16 @@ const Stories = () => {
               />
               <div className="py-3 pr-2">
                 <p className="text-base md:text-lg font-extrabold text-brand-grey leading-snug">
-                  “I Never Gave Up on Learning.”
+                  {resolve(data, "story-quote", "\"I Never Gave Up on Learning.\"")}
                 </p>
                 <p className="mt-3 text-xs md:text-sm text-brand-grey/80 leading-relaxed">
-                  Tala, 13, returned to school through LAL's programs after years of disruption.
+                  {resolve(data, "story-description", "Tala, 13, returned to school through LAL's programs after years of disruption.")}
                 </p>
                 <a
                   href="#"
                   className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-brand-magenta hover:underline underline-offset-4"
                 >
-                  Read Tala's Story <span aria-hidden="true">→</span>
+                  {resolve(data, "story-cta", "Read Tala's Story")} <span aria-hidden="true">→</span>
                 </a>
               </div>
             </div>
@@ -56,18 +60,18 @@ const Stories = () => {
           {/* Media */}
           <div className="grid grid-cols-1 gap-7 md:grid-cols-[190px_1fr] md:items-center">
             <div>
-              <p className="eyebrow">Media</p>
+              <p className="eyebrow">{resolve(data, "media-eyebrow", "Media")}</p>
               <h2 className="mt-4 text-2xl md:text-3xl font-extrabold text-brand-grey leading-tight">
-                See Our Work in Action.
+                {resolve(data, "media-heading", "See Our Work in Action.")}
               </h2>
               <p className="mt-5 text-sm text-brand-grey/85 leading-relaxed">
-                Watch videos and photos from our learning spaces across Lebanon.
+                {resolve(data, "media-description", "Watch videos and photos from our learning spaces across Lebanon.")}
               </p>
               <a
                 href="#"
                 className="mt-5 inline-flex items-center gap-1 text-sm font-bold text-brand-magenta hover:underline underline-offset-4"
               >
-                Watch Videos <span aria-hidden="true">→</span>
+                {resolve(data, "media-cta", "Watch Videos")} <span aria-hidden="true">→</span>
               </a>
             </div>
 

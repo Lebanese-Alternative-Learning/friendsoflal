@@ -1,6 +1,10 @@
 import lalLogoDark from "@/assets/lal-logo-dark.png";
+import { useSiteData } from "@/context/SiteDataContext";
+import { resolve } from "@/utils/dataLoader";
 
 const Footer = () => {
+  const data = useSiteData();
+
   return (
     <footer className="bg-brand-grey text-white">
       <div className="container-narrow px-6 md:px-8 py-12 md:py-16">
@@ -12,8 +16,7 @@ const Footer = () => {
               className="h-10 md:h-12 w-auto mb-5"
             />
             <p className="text-sm md:text-base text-white/85 leading-relaxed">
-              Friends of Lebanese Alternative Learning · Washington, D.C. ·
-              U.S. 501(c)(3) · EIN 99-3511136
+              {resolve(data, "footer-org", "Friends of Lebanese Alternative Learning · Washington, D.C. · U.S. 501(c)(3) · EIN 99-3511136")}
             </p>
           </div>
 
@@ -22,7 +25,7 @@ const Footer = () => {
               href="mailto:hello@friendsoflal.org"
               className="text-white hover:text-brand-blue transition-colors font-semibold"
             >
-              hello@friendsoflal.org
+              {resolve(data, "footer-email", "hello@friendsoflal.org")}
             </a>
             <a
               href="https://lal.ngo"
@@ -30,13 +33,13 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="text-white hover:text-brand-blue transition-colors font-semibold"
             >
-              lal.ngo →
+              {resolve(data, "footer-lal-link", "lal.ngo →")}
             </a>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/15 text-center text-xs text-white/60">
-          © 2025 Friends of Lebanese Alternative Learning
+          © {resolve(data, "footer-copyright-year", "2025")} Friends of Lebanese Alternative Learning
         </div>
       </div>
     </footer>

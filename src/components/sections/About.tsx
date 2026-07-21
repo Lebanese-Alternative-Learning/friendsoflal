@@ -1,4 +1,7 @@
-const columns = [
+import { useSiteData } from "@/context/SiteDataContext";
+import { resolve } from "@/utils/dataLoader";
+
+const defaultColumns = [
   {
     title: "Who is FLAL?",
     body: "Friends of Lebanese Alternative Learning (FLAL) is a 501(c)(3) organization based in Washington, D.C., dedicated to funding the work of Lebanese Alternative Learning (LAL) — a Lebanese NGO that believes in the power of education to mobilize change and brighten futures. LAL spreads seeds of education in the least privileged of places, granting access to quality learning through technology, anytime, anywhere.",
@@ -14,24 +17,26 @@ const columns = [
 ];
 
 const About = () => {
+  const data = useSiteData();
+
   return (
     <section id="about" className="bg-background section-padding scroll-mt-20">
       <div className="container-narrow">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="eyebrow">Who We Are</p>
+          <p className="eyebrow">{resolve(data, "about-eyebrow", "Who We Are")}</p>
           <h2 className="mt-4 text-3xl md:text-5xl font-extrabold text-brand-grey leading-tight">
-            Funding Education at the Roots.
+            {resolve(data, "about-heading", "Funding Education at the Roots.")}
           </h2>
         </div>
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-          {columns.map((col) => (
+          {defaultColumns.map((col, i) => (
             <div key={col.title} className="border-l-4 border-brand-magenta pl-6">
               <h3 className="text-xl md:text-2xl font-extrabold text-brand-grey">
-                {col.title}
+                {resolve(data, `about-col-${i}-title`, col.title)}
               </h3>
               <p className="mt-4 text-base text-brand-grey/90 leading-relaxed">
-                {col.body}
+                {resolve(data, `about-col-${i}-body`, col.body)}
               </p>
             </div>
           ))}
@@ -44,7 +49,7 @@ const About = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 font-bold text-brand-magenta hover:underline underline-offset-4"
           >
-            Learn more about LAL's work at lal.ngo
+            {resolve(data, "about-link-text", "Learn more about LAL's work at lal.ngo")}
             <span aria-hidden="true">→</span>
           </a>
         </div>

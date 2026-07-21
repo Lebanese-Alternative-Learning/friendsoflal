@@ -1,7 +1,9 @@
 import { RefreshCw, TrendingUp, UserCheck, Sprout } from "lucide-react";
 import boyTablet from "@/assets/boy-tablet.jpg";
+import { useSiteData } from "@/context/SiteDataContext";
+import { resolve } from "@/utils/dataLoader";
 
-const items = [
+const defaultItems = [
   {
     Icon: RefreshCw,
     title: "Ensure Continuity",
@@ -25,6 +27,8 @@ const items = [
 ];
 
 const WhyDonate = () => {
+  const data = useSiteData();
+
   return (
     <section id="why-donate" className="bg-brand-soft/60 py-14 px-6 md:py-16 md:px-8 scroll-mt-20">
       <div className="container-narrow">
@@ -41,27 +45,26 @@ const WhyDonate = () => {
           </div>
 
           <div>
-            <p className="eyebrow">Why Donate</p>
+            <p className="eyebrow">{resolve(data, "why-donate-eyebrow", "Why Donate")}</p>
             <h2 className="mt-3 text-3xl md:text-4xl font-extrabold text-brand-grey leading-tight">
-              Your Support Keeps Education Going.
+              {resolve(data, "why-donate-heading", "Your Support Keeps Education Going.")}
             </h2>
             <p className="mt-3 max-w-3xl text-sm md:text-base text-brand-grey/85 leading-relaxed">
-              Your donation helps children in Lebanon access quality education,
-              recover lost learning, and build a brighter future.
+              {resolve(data, "why-donate-description", "Your donation helps children in Lebanon access quality education, recover lost learning, and build a brighter future.")}
             </p>
 
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7">
-              {items.map(({ Icon, title, body }) => (
-                <div key={title} className="flex gap-4">
+              {defaultItems.map((item, i) => (
+                <div key={item.title} className="flex gap-4">
                   <div className="shrink-0 h-12 w-12 rounded-full bg-brand-magenta/10 flex items-center justify-center">
-                    <Icon className="h-6 w-6 text-brand-magenta" strokeWidth={1.8} aria-hidden="true" />
+                    <item.Icon className="h-6 w-6 text-brand-magenta" strokeWidth={1.8} aria-hidden="true" />
                   </div>
                   <div>
                     <h3 className="text-sm font-extrabold text-brand-grey leading-snug">
-                      {title}
+                      {resolve(data, `why-donate-item-${i}-title`, item.title)}
                     </h3>
                     <p className="mt-2 text-xs text-brand-grey/80 leading-relaxed">
-                      {body}
+                      {resolve(data, `why-donate-item-${i}-body`, item.body)}
                     </p>
                   </div>
                 </div>
@@ -73,7 +76,7 @@ const WhyDonate = () => {
                 href="#donate"
                 className="inline-flex items-center justify-center rounded-full bg-brand-magenta px-8 py-3 text-sm font-bold text-primary-foreground shadow-md transition-all hover:shadow-xl hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-magenta focus-visible:ring-offset-2"
               >
-                Donate Today
+                {resolve(data, "why-donate-cta", "Donate Today")}
               </a>
             </div>
           </div>

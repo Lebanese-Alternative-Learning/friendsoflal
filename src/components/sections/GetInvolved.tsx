@@ -1,6 +1,8 @@
 import { useState, FormEvent } from "react";
 import { toast } from "sonner";
 import { HandHeart, Users, Megaphone, Mail } from "lucide-react";
+import { useSiteData } from "@/context/SiteDataContext";
+import { resolve } from "@/utils/dataLoader";
 
 const ways = [
   { Icon: HandHeart, label: "Make a Gift" },
@@ -11,6 +13,7 @@ const ways = [
 
 const GetInvolved = () => {
   const [email, setEmail] = useState("");
+  const data = useSiteData();
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -27,12 +30,12 @@ const GetInvolved = () => {
         <div className="grid grid-cols-1 lg:grid-cols-[245px_1fr_1px_310px] gap-10 lg:gap-8 xl:gap-10 items-center">
           {/* Heading */}
           <div>
-            <p className="eyebrow">Get Involved</p>
+            <p className="eyebrow">{resolve(data, "get-involved-eyebrow", "Get Involved")}</p>
             <h2 className="mt-4 text-3xl md:text-4xl font-extrabold text-brand-grey leading-tight">
-              Be Part of the Change.
+              {resolve(data, "get-involved-heading", "Be Part of the Change.")}
             </h2>
             <p className="mt-5 text-sm md:text-base text-brand-grey/85 leading-relaxed">
-              There are many ways to support education in Lebanon.
+              {resolve(data, "get-involved-description", "There are many ways to support education in Lebanon.")}
             </p>
           </div>
 
@@ -48,7 +51,7 @@ const GetInvolved = () => {
                   <Icon className="h-6 w-6 text-brand-magenta" strokeWidth={1.75} aria-hidden="true" />
                 </span>
                 <span className="mt-3 text-sm font-bold text-brand-grey leading-snug md:whitespace-nowrap">
-                  {label}
+                  {resolve(data, `get-involved-way-${label.toLowerCase().replace(/\s+/g, "-")}`, label)}
                 </span>
               </button>
             ))}
@@ -59,7 +62,7 @@ const GetInvolved = () => {
           {/* Subscribe */}
           <div>
             <p className="text-sm text-brand-grey/85 leading-relaxed">
-              Stay connected. Get updates on our work, stories from the field, and ways to get involved.
+              {resolve(data, "subscribe-description", "Stay connected. Get updates on our work, stories from the field, and ways to get involved.")}
             </p>
             <form
               onSubmit={handleSubmit}
@@ -81,7 +84,7 @@ const GetInvolved = () => {
                 type="submit"
                 className="rounded-full bg-brand-magenta px-7 py-3 font-bold text-primary-foreground shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-magenta focus-visible:ring-offset-2 whitespace-nowrap"
               >
-                Notify Me
+                {resolve(data, "subscribe-cta", "Notify Me")}
               </button>
             </form>
           </div>
