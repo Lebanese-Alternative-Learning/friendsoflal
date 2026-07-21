@@ -73,7 +73,9 @@ const WhyDonate = () => {
 
             <div className="mt-8 text-center lg:pr-36">
               <a
-                href="#donate"
+                href="https://buy.stripe.com/6oUdR82Za3TX8Rv5Ys3cc00"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full bg-brand-magenta px-8 py-3 text-sm font-bold text-primary-foreground shadow-md transition-all hover:shadow-xl hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-magenta focus-visible:ring-offset-2"
               >
                 {resolve(data, "why-donate-cta", "Donate Today")}
