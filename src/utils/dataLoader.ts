@@ -1,14 +1,12 @@
 /**
- * Data loader: fetches site-content.csv from the provided URL,
+ * Data loader: reads site-content.csv bundled at build time,
  * parses id/value pairs, and returns a flat record map.
  *
  * CSV format: id,value
  * - IDs use kebab-case (e.g. hero-header)
  * - FAQ rows use id="faq" with value="question----answer"
  */
-
-const DEFAULT_CSV_URL =
-  "https://script.google.com/macros/s/AKfycbxJATN1VUm52K2EefKKnZOVAGPtBRh2MSMcKjqbkQRu7ils8G_T355WAiDf2SlGLO_K/exec";
+import csvText from "@/data/site-content.csv?raw";
 
 export interface SiteData {
   [key: string]: string;
@@ -59,25 +57,9 @@ export function parseCSV(text: string): SiteData {
 }
 
 /**
- * Fetch and parse the site content CSV.
- * Returns empty object on failure (components fall back to defaults).
+ * Parse the bundled CSV at import time.
  */
-export async function loadSiteData(
-  url: string = DEFAULT_CSV_URL
-): Promise<SiteData> {
-  try {
-    const res = await fetch(url);
-    if (!res.ok) {
-      console.warn("[dataLoader] CSV fetch failed:", res.status, res.statusText);
-      return {};
-    }
-    const text = await res.text();
-    return parseCSV(text);
-  } catch (err) {
-    console.warn("[dataLoader] CSV fetch error:", err);
-    return {};
-  }
-}
+export const siteData: SiteData = parseCSV(csvText);
 
 /**
  * Resolve a single value: use CSV data if present, otherwise return default.

@@ -19,7 +19,6 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUT_PATH = resolve(__dirname, "../src/data/site-content.csv");
 
 async function main() {
-  console.log(`[fetch-site-content] GET ${CSV_URL}`);
   const res = await fetch(CSV_URL, { redirect: "follow" });
   if (!res.ok) {
     throw new Error(`Fetch failed: ${res.status} ${res.statusText}`);
@@ -29,9 +28,6 @@ async function main() {
 
   await mkdir(dirname(OUT_PATH), { recursive: true });
   await writeFile(OUT_PATH, text, "utf8");
-  console.log(
-    `[fetch-site-content] Saved ${text.length} bytes → ${OUT_PATH}`
-  );
 }
 
 main().catch((err) => {

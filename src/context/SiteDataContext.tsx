@@ -1,17 +1,11 @@
-import { createContext, useContext, useEffect, useState, ReactNode } from "react";
-import { loadSiteData, SiteData } from "@/utils/dataLoader";
+import { createContext, useContext, ReactNode } from "react";
+import { siteData, SiteData } from "@/utils/dataLoader";
 
-const SiteDataContext = createContext<SiteData | null>(null);
+const SiteDataContext = createContext<SiteData | null>(siteData);
 
 export function SiteDataProvider({ children }: { children: ReactNode }) {
-  const [data, setData] = useState<SiteData | null>(null);
-
-  useEffect(() => {
-    loadSiteData().then(setData);
-  }, []);
-
   return (
-    <SiteDataContext.Provider value={data}>
+    <SiteDataContext.Provider value={siteData}>
       {children}
     </SiteDataContext.Provider>
   );
