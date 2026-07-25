@@ -20,10 +20,11 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 w-full bg-background/90 backdrop-blur-md border-b border-border">
       <nav className="container-narrow flex items-center justify-between py-4 px-6 md:px-8">
         <a href="#top" className="flex items-center gap-3" aria-label="Friends of LAL home">
-          <span className="text-brand-grey font-extrabold text-base md:text-lg leading-none">
-            {resolve(data, "navbar-brand", "Friends of")}
-          </span>
-          <img src={lalLogo} alt="Lebanese Alternative Learning" className="h-8 md:h-10 w-auto" />
+          <img
+            src={friendsOfLalLogo.url}
+            alt="Friends of Lebanese Alternative Learning"
+            className="h-10 md:h-12 w-auto"
+          />
         </a>
 
         <div className="hidden md:flex items-center gap-7">
