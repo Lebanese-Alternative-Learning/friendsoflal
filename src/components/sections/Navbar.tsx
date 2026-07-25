@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import lalLogo from "@/assets/lal-logo-light.png";
+import friendsOfLalLogo from "@/assets/friends-of-lal-logo-light.png.asset.json";
 import { useSiteData } from "@/context/SiteDataContext";
 import { resolve } from "@/utils/dataLoader";
 
