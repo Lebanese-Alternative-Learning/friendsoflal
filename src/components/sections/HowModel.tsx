@@ -57,10 +57,10 @@ const HowModel = () => {
                   Step {i + 1}
                 </div>
                 <h3 className="mt-1 text-sm font-extrabold text-brand-grey leading-snug">
-                  {resolve(data, `how-step-${i}-title`, title)}
+                  {resolve(data, `how-step-${i+1}-title`, title)}
                 </h3>
                 <p className="mt-2 text-xs text-brand-grey/80 leading-relaxed">
-                  {resolve(data, `how-step-${i}-body`, body)}
+                  {resolve(data, `how-step-${i+1}-body`, body)}
                 </p>
               </div>
               {i < defaultSteps.length - 1 && (
