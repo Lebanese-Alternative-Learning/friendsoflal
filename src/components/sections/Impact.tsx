@@ -31,10 +31,10 @@ const Impact = () => {
               className="min-h-[150px] rounded-2xl bg-background p-4 md:p-5 shadow-sm transition-shadow hover:shadow-md flex flex-col items-center text-center"
             >
               <div className="text-2xl md:text-3xl font-extrabold text-brand-magenta leading-tight">
-                {resolve(data, `impact-stat-${i}-value`, stat.value)}
+                {resolve(data, `impact-stat-${i+1}-value`, stat.value)}
               </div>
               <div className="mt-2 min-h-[34px] text-xs md:text-sm font-extrabold text-brand-grey leading-snug">
-                {resolve(data, `impact-stat-${i}-label`, stat.label)}
+                {resolve(data, `impact-stat-${i+1}-label`, stat.label)}
               </div>
               <stat.Icon className="mt-auto h-9 w-9 text-brand-magenta" strokeWidth={1.65} aria-hidden="true" />
             </div>
