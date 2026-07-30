@@ -7,7 +7,6 @@ const defaultMediaThumb = "@/assets/media-thumb.jpg";
 
 const Stories = () => {
   const data = useSiteData();
-  const [videoClicked, setVideoClicked] = useState(false);
 
   const testimonialImage = resolveImage(data, "stories-testimonial-image", "@/assets/tala-portrait.jpg");
   const mediaImageUrl = resolve(data, "stories-media-image", defaultMediaThumb);
@@ -85,13 +84,7 @@ const Stories = () => {
             </div>
 
             {isYouTube && youtubeId ? (
-              <a
-                href={`https://www.youtube.com/embed/${youtubeId}?autoplay=1`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative block rounded-2xl overflow-hidden group shadow-sm hover:shadow-md transition-shadow"
-                onClick={() => setVideoClicked(true)}
-              >
+              <div className="relative block rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                 <iframe
                   src={`https://www.youtube.com/embed/${youtubeId}`}
                   title="LAL media video"
@@ -99,16 +92,7 @@ const Stories = () => {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
-                <div
-                  className={`absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-300 ${
-                    videoClicked ? "opacity-0" : "opacity-100"
-                  }`}
-                >
-                  <span className="h-14 w-14 rounded-full bg-white/90 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-                    <Play className="h-6 w-6 text-brand-magenta ml-0.5" fill="currentColor" aria-hidden="true" />
-                  </span>
-                </div>
-              </a>
+              </div>
             ) : (
               <a href="#" className="relative block rounded-2xl overflow-hidden group shadow-sm hover:shadow-md transition-shadow">
                 <img
