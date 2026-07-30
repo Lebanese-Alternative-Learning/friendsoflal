@@ -1,16 +1,16 @@
-import heroBg from "@/assets/hero-bg.jpg";
 import { useSiteData } from "@/context/SiteDataContext";
-import { resolve } from "@/utils/dataLoader";
+import { resolve, resolveImage } from "@/utils/dataLoader";
 
 const Hero = () => {
   const data = useSiteData();
+  const bgImage = resolveImage(data, "hero-background-image", "@/assets/hero-bg.jpg");
 
   return (
     <section id="top" className="relative overflow-hidden bg-background">
       <div
         aria-hidden="true"
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        style={{ backgroundImage: `url(${bgImage})` }}
       />
       <div
         aria-hidden="true"

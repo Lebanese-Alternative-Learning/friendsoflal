@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import friendsOfLalLogo from "@/assets/friends-of-lal-logo-light.png.asset.json";
 import { useSiteData } from "@/context/SiteDataContext";
-import { resolve } from "@/utils/dataLoader";
+import { resolve, resolveImage } from "@/utils/dataLoader";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -15,13 +14,14 @@ const navLinks = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const data = useSiteData();
+  const logo = resolveImage(data, "footer-logo-light", "@/assets/lal-logo-light.png");
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background/90 backdrop-blur-md border-b border-border">
       <nav className="container-narrow flex items-center justify-between py-4 px-6 md:px-8">
         <a href="#top" className="flex items-center gap-3" aria-label="Friends of LAL home">
           <img
-            src={friendsOfLalLogo.url}
+            src={logo}
             alt="Friends of Lebanese Alternative Learning"
             className="h-10 md:h-12 w-auto"
           />

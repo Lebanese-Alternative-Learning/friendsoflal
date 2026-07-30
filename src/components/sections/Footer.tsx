@@ -1,9 +1,9 @@
-import lalLogoDark from "@/assets/lal-logo-dark.png";
 import { useSiteData } from "@/context/SiteDataContext";
-import { resolve } from "@/utils/dataLoader";
+import { resolve, resolveImage } from "@/utils/dataLoader";
 
 const Footer = () => {
   const data = useSiteData();
+  const logo = resolveImage(data, "footer-logo-dark", "@/assets/lal-logo-dark.png");
 
   return (
     <footer className="bg-brand-grey text-white">
@@ -11,12 +11,12 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
           <div className="max-w-md">
             <img
-              src={lalLogoDark}
+              src={logo}
               alt="Lebanese Alternative Learning"
               className="h-10 md:h-12 w-auto mb-5"
             />
             <p className="text-sm md:text-base text-white/85 leading-relaxed">
-              {resolve(data, "footer-org", "Friends of Lebanese Alternative Learning · Washington, D.C. · U.S. 501(c)(3) · EIN 99-3511136")}
+              {resolve(data, "footer-org", "Friends of Lebanese Alternative Learning")} · {resolve(data, "footer-location", "Washington, D.C.")} · {resolve(data, "footer-legal", "U.S. 501(c)(3) · EIN 99-3511136")}
             </p>
           </div>
 
@@ -28,7 +28,7 @@ const Footer = () => {
               {resolve(data, "footer-email", "hello@friendsoflal.org")}
             </a>
             <a
-              href="https://lal.ngo"
+              href={resolve(data, "footer-lal-url", "https://lal.ngo")}
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-brand-blue transition-colors font-semibold"
@@ -39,7 +39,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/15 text-center text-xs text-white/60">
-          © {resolve(data, "footer-copyright-year", "2025")} Friends of Lebanese Alternative Learning
+          {resolve(data, "footer-copyright", "© 2025 Friends of Lebanese Alternative Learning")}
         </div>
       </div>
     </footer>

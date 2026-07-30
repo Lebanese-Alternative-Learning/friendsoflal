@@ -1,7 +1,6 @@
 import { RefreshCw, TrendingUp, UserCheck, Sprout } from "lucide-react";
-import boyTablet from "@/assets/boy-tablet.jpg";
 import { useSiteData } from "@/context/SiteDataContext";
-import { resolve } from "@/utils/dataLoader";
+import { resolve, resolveImage } from "@/utils/dataLoader";
 
 const defaultItems = [
   {
@@ -28,6 +27,7 @@ const defaultItems = [
 
 const WhyDonate = () => {
   const data = useSiteData();
+  const image = resolveImage(data, "whydonate-image", "@/assets/boy-tablet.jpg");
 
   return (
     <section id="why-donate" className="bg-brand-soft/60 py-14 px-6 md:py-16 md:px-8 scroll-mt-20">
@@ -35,7 +35,7 @@ const WhyDonate = () => {
         <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-10 lg:gap-12 items-stretch">
           <div className="rounded-2xl overflow-hidden shadow-md">
             <img
-              src={boyTablet}
+              src={image}
               alt="A Lebanese student learning on a tablet"
               width={1024}
               height={768}
@@ -45,12 +45,12 @@ const WhyDonate = () => {
           </div>
 
           <div>
-            <p className="eyebrow">{resolve(data, "why-donate-eyebrow", "Why Donate")}</p>
+            <p className="eyebrow">{resolve(data, "whydonate-eyebrow", "Why Donate")}</p>
             <h2 className="mt-3 text-3xl md:text-4xl font-extrabold text-brand-grey leading-tight">
-              {resolve(data, "why-donate-heading", "Your Support Keeps Education Going.")}
+              {resolve(data, "whydonate-title", "Your Support Keeps Education Going.")}
             </h2>
             <p className="mt-3 max-w-3xl text-sm md:text-base text-brand-grey/85 leading-relaxed">
-              {resolve(data, "why-donate-description", "Your donation helps children in Lebanon access quality education, recover lost learning, and build a brighter future.")}
+              {resolve(data, "whydonate-subtitle", "Your donation helps children in Lebanon access quality education, recover lost learning, and build a brighter future.")}
             </p>
 
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7">
@@ -61,10 +61,10 @@ const WhyDonate = () => {
                   </div>
                   <div>
                     <h3 className="text-sm font-extrabold text-brand-grey leading-snug">
-                      {resolve(data, `why-donate-item-${i}-title`, item.title)}
+                      {resolve(data, `whydonate-item-${i + 1}-title`, item.title)}
                     </h3>
                     <p className="mt-2 text-xs text-brand-grey/80 leading-relaxed">
-                      {resolve(data, `why-donate-item-${i}-body`, item.body)}
+                      {resolve(data, `whydonate-item-${i + 1}-body`, item.body)}
                     </p>
                   </div>
                 </div>
@@ -78,7 +78,7 @@ const WhyDonate = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full bg-brand-magenta px-8 py-3 text-sm font-bold text-primary-foreground shadow-md transition-all hover:shadow-xl hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-magenta focus-visible:ring-offset-2"
               >
-                {resolve(data, "why-donate-cta", "Donate Today")}
+                {resolve(data, "whydonate-cta", "Donate Today")}
               </a>
             </div>
           </div>
