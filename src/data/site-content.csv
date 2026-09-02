@@ -82,6 +82,7 @@ donate-subscribe-placeholder,Your email address
 donate-subscribe-btn,Notify Me
 donate-subscribe-success,Thanks! We'll be in touch.
 donate-subscribe-success-desc,You'll hear from us as soon as donations open.
+formspree-endpoint,https://formspree.io/f/YOUR_FORM_ID
 whydonate-eyebrow,Why Donate
 whydonate-title,Your Support Keeps Education Going.
 whydonate-subtitle,Your donation helps children in Lebanon access quality education, recover lost learning, and build a brighter future.
