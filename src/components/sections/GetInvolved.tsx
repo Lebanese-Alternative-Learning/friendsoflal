@@ -125,16 +125,25 @@ const GetInvolved = () => {
                 id="email"
                 type="email"
                 required
+                disabled={isSubmitting}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your email address"
-                className="flex-1 rounded-full bg-background border border-border px-5 py-3 text-brand-grey placeholder:text-brand-grey/50 focus:outline-none focus:ring-2 focus:ring-brand-magenta focus:border-transparent"
+                className="flex-1 rounded-full bg-background border border-border px-5 py-3 text-brand-grey placeholder:text-brand-grey/50 focus:outline-none focus:ring-2 focus:ring-brand-magenta focus:border-transparent disabled:opacity-60"
               />
               <button
                 type="submit"
-                className="rounded-full bg-brand-magenta px-7 py-3 font-bold text-primary-foreground shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-magenta focus-visible:ring-offset-2 whitespace-nowrap"
+                disabled={isSubmitting}
+                className="rounded-full bg-brand-magenta px-7 py-3 font-bold text-primary-foreground shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-magenta focus-visible:ring-offset-2 whitespace-nowrap disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0 inline-flex items-center justify-center gap-2"
               >
-                {resolve(data, "subscribe-cta", "Notify Me")}
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
+                    <span>Sending...</span>
+                  </>
+                ) : (
+                  resolve(data, "subscribe-cta", "Notify Me")
+                )}
               </button>
             </form>
           </div>
