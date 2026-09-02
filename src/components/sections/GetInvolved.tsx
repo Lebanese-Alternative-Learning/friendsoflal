@@ -1,6 +1,7 @@
 import { useState, FormEvent } from "react";
 import { toast } from "sonner";
-import { HandHeart, Users, Megaphone, Mail } from "lucide-react";
+import { HandHeart, Users, Megaphone, Mail, Loader2 } from "lucide-react";
+import { z } from "zod";
 import { useSiteData } from "@/context/SiteDataContext";
 import { resolve } from "@/utils/dataLoader";
 
@@ -11,17 +12,66 @@ const ways = [
   { Icon: Mail, label: "Subscribe" },
 ];
 
+const emailSchema = z
+  .string()
+  .trim()
+  .email({ message: "Please enter a valid email address." })
+  .max(255, { message: "Email must be less than 255 characters." });
+
 const GetInvolved = () => {
   const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const data = useSiteData();
 
-  const handleSubmit = (e: FormEvent) => {
+  const formspreeEndpoint = resolve(data, "formspree-endpoint", "").trim();
+
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    if (!email) return;
-    toast.success("Thanks! We'll be in touch.", {
-      description: "You'll hear from us as soon as donations open.",
-    });
-    setEmail("");
+
+    const validation = emailSchema.safeParse(email);
+    if (!validation.success) {
+      toast.error(validation.error.errors[0].message);
+      return;
+    }
+
+    if (!formspreeEndpoint || formspreeEndpoint.includes("YOUR_FORM_ID")) {
+      toast.error("Formspree endpoint is not configured yet.");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch(formspreeEndpoint, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: validation.data }),
+      });
+
+      if (response.ok) {
+        toast.success(
+          resolve(data, "donate-subscribe-success", "Thanks! We'll be in touch."),
+          {
+            description: resolve(
+              data,
+              "donate-subscribe-success-desc",
+              "You'll hear from us as soon as donations open."
+            ),
+          }
+        );
+        setEmail("");
+      } else {
+        const body = await response.json().catch(() => ({}));
+        toast.error(body?.error || "Something went wrong. Please try again.");
+      }
+    } catch {
+      toast.error("Unable to submit. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
