@@ -1,9 +1,10 @@
 import { useSiteData } from "@/context/SiteDataContext";
-import { resolve, resolveImage } from "@/utils/dataLoader";
+import { resolve } from "@/utils/dataLoader";
+import logoAsset from "@/assets/friends-of-lal-logo-dark.png.asset.json";
 
 const Footer = () => {
   const data = useSiteData();
-  const logo = resolveImage(data, "footer-logo-dark", "@/assets/lal-logo-dark.png");
+  const logo = logoAsset.url;
 
   return (
     <footer className="bg-brand-grey text-white">
