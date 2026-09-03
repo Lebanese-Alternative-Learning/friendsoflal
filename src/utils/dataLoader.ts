@@ -44,7 +44,11 @@ export function parseCSV(text: string): SiteData {
     if (value.startsWith('"') && value.endsWith('"')) {
       value = value.slice(1, -1);
     }
-    result[id] = value;
+    if (result[id]) {
+      result[id] = result[id] + "----" + value;
+    } else {
+      result[id] = value;
+    }
   }
 
   return result;
