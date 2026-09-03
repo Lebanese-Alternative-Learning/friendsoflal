@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useSiteData } from "@/context/SiteDataContext";
-import { resolve, resolveImage } from "@/utils/dataLoader";
+import { resolve } from "@/utils/dataLoader";
+import logoAsset from "@/assets/friends-of-lal-logo-light.png.asset.json";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -14,7 +15,7 @@ const navLinks = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const data = useSiteData();
-  const logo = resolveImage(data, "footer-logo-light", "@/assets/lal-logo-light.png");
+  const logo = logoAsset.url;
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background/90 backdrop-blur-md border-b border-border">
