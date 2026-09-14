@@ -8,7 +8,7 @@ const navLinks = [
   { href: "#about", label: "About" },
   { href: "#impact", label: "Impact" },
   { href: "#why-lal", label: "Why LAL" },
-  { href: "#stories", label: "Stories" },
+  { href: "#media", label: "Media" },
   { href: "#faq", label: "FAQ" },
 ];
 
