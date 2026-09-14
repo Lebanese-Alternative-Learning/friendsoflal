@@ -2,7 +2,7 @@ id,value
 hero-header,Every Child Deserves the Chance to Learn.
 hero-subtitle,Friends of Lebanese Alternative Learning funds free, quality education for every child in Lebanon — through technology, in school and out.
 hero-cta-primary,Support Our Work
-hero-cta-secondary,See How We Help
+hero-cta-secondary,Learn More
 hero-legal,U.S. 501(c)(3) · EIN 99-3511136
 hero-background-image,@/assets/hero-bg.jpg
 about-eyebrow,Who We Are
@@ -112,7 +112,6 @@ footer-logo-light,@/assets/lal-logo-light.png
 nav-link-1,About
 nav-link-2,Impact
 nav-link-3,Why LAL
-nav-link-4,Media
+nav-link-4,Stories
 nav-link-5,FAQ
 nav-donate,Donate
-formspree-endpoint,https://formspree.io/f/mjyvwdvz
