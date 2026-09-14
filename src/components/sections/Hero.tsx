@@ -43,7 +43,7 @@ const Hero = () => {
               href="#about"
               className="inline-flex items-center justify-center rounded-full bg-background/80 backdrop-blur border-2 border-brand-magenta px-8 py-4 text-base md:text-lg font-bold text-brand-magenta transition-all hover:bg-brand-magenta hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-magenta focus-visible:ring-offset-2"
             >
-              {resolve(data, "hero-cta-secondary", "Learn More")}
+              {resolve(data, "hero-cta-secondary", "See How We Help")}
             </a>
           </div>
 
