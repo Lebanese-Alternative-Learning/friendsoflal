@@ -28,7 +28,7 @@ const Index = () => {
         <WhyLAL />
         <HowModel />
         <WhyDonate />
-        <Stories />
+        <Media />
         <GetInvolved />
         <FAQ />
       </main>
