@@ -5,7 +5,7 @@ import WhyLAL from "@/components/sections/WhyLAL";
 import HowModel from "@/components/sections/HowModel";
 import Impact from "@/components/sections/Impact";
 import WhyDonate from "@/components/sections/WhyDonate";
-import Stories from "@/components/sections/Stories";
+import Media from "@/components/sections/Media";
 import GetInvolved from "@/components/sections/GetInvolved";
 import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/sections/Footer";
@@ -28,7 +28,7 @@ const Index = () => {
         <WhyLAL />
         <HowModel />
         <WhyDonate />
-        <Stories />
+        <Media />
         <GetInvolved />
         <FAQ />
       </main>
