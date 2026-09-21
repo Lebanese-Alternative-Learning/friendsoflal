@@ -31,7 +31,7 @@ const About = () => {
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
           {defaultColumns.map((col, i) => (
-            <div key={col.title} className="border-l-4 border-brand-magenta pl-6">
+            <div key={col.title} className="border-l border-brand-magenta pl-6">
               <h3 className="text-xl md:text-2xl font-extrabold text-brand-grey">
                 {resolve(data, `about-col-${i+1}-title`, col.title)}
               </h3>
