@@ -1,6 +1,6 @@
 import { useSiteData } from "@/context/SiteDataContext";
 import { resolve } from "@/utils/dataLoader";
-import logoAsset from "@/assets/friends-of-lal-logo-dark.png.asset.json";
+import logoAsset from "@/assets/friends-of-lal-logo-2.png.asset.json";
 
 const Footer = () => {
   const data = useSiteData();
