@@ -26,12 +26,12 @@ const Index = () => {
       <main className="flex-1">
         <Hero />
         <EducationGuardian />
+        <Donate />
         <About />
         <Impact />
         <WhyLAL />
         <HowModel />
         <WhyDonate />
-        <Donate />
         <Media />
         <GetInvolved />
         <FAQ />
