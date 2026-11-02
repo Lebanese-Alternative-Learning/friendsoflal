@@ -57,6 +57,8 @@ const Donate = () => {
       }
     }
     setSubmitted(true);
+    // Also cover keyboard submits (Enter) — the anchor click opens Stripe for pointer users.
+    window.open(donate.stripeCheckoutUrl, "_blank", "noopener");
   };
 
   return (
