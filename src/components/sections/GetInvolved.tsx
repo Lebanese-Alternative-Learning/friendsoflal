@@ -97,7 +97,7 @@ const GetInvolved = () => {
                 type="button"
                 className="group flex flex-col items-center text-center focus:outline-none"
               >
-                <span className="h-14 w-14 rounded-full bg-brand-magenta/10 flex items-center justify-center transition-colors group-hover:bg-brand-magenta/20">
+                <span className="h-14 w-14 rounded-full bg-brand-magenta/10 flex items-center justify-center">
                   <Icon className="h-6 w-6 text-brand-magenta" strokeWidth={1.75} aria-hidden="true" />
                 </span>
                 <span className="mt-3 text-sm font-bold text-brand-grey leading-snug md:whitespace-nowrap">
