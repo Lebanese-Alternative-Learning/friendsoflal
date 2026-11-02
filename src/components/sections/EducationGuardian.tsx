@@ -4,12 +4,14 @@ import DonateBox from "@/components/sections/Donate";
 const EducationGuardian = () => (
   <section id="education-guardian" aria-labelledby="guardian-heading" className="bg-brand-soft section-padding scroll-mt-20">
     <div className="container-narrow grid grid-cols-1 items-start gap-10 lg:grid-cols-[1.35fr_1fr] lg:gap-16">
+      <header className="text-center lg:col-span-2">
+        <h2 id="guardian-heading" className="text-4xl md:text-5xl font-extrabold leading-tight text-brand-magenta">Education Guardian Campaign</h2>
+        <p className="mt-4 text-lg md:text-xl leading-relaxed text-brand-grey">Give a child a full year of learning today.</p>
+      </header>
       <div>
-        <p className="text-2xl md:text-3xl font-extrabold leading-tight text-brand-magenta">Education Guardian Campaign</p>
-        <p className="mt-3 text-base md:text-lg leading-relaxed text-brand-grey">Give a child a full year of learning today.</p>
-        <h2 id="guardian-heading" className="mt-4 text-3xl md:text-4xl font-extrabold leading-tight text-brand-grey">
+        <h3 className="text-3xl md:text-4xl font-extrabold leading-tight text-brand-grey">
           Every Child Has a <span className="text-brand-magenta">Right to Learn.</span>
-        </h2>
+        </h3>
         <p className="mt-5 text-base md:text-lg leading-relaxed text-brand-grey/90">
           For many children in Lebanon, that right is interrupted by conflict, displacement, financial hardship, and limited access to educational resources. Every interruption breaks their learning continuity, and every lost month is hard to catch up.
         </p>
