@@ -16,7 +16,7 @@ const FundraisingProgress = () => {
         <strong className="text-4xl font-extrabold text-brand-magenta">{dollars.format(educationGuardian.raisedAmount)}</strong>
         <span className="text-base md:text-lg">raised of <strong className="font-extrabold">{dollars.format(educationGuardian.fundraisingGoal)}</strong> goal</span>
       </p>
-      <Progress className="mt-4 h-3" value={percent} aria-label="Fundraising progress" aria-valuetext={`${dollars.format(educationGuardian.raisedAmount)} raised of ${dollars.format(educationGuardian.fundraisingGoal)} goal`} />
+      <Progress className="mt-4 h-3 bg-brand-blue/40" value={percent} aria-label="Fundraising progress" aria-valuetext={`${dollars.format(educationGuardian.raisedAmount)} raised of ${dollars.format(educationGuardian.fundraisingGoal)} goal`} />
       <p className="mt-2 text-sm font-bold text-brand-grey">{Math.round(percent)}% of goal reached</p>
     </div>
   );
