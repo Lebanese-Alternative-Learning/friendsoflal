@@ -43,6 +43,9 @@ const EducationGuardian = () => (
         </a>
         <p className="mt-3 text-xs text-white/80">Checkout opens securely on Stripe in a new tab.</p>
       </aside>
+      <div className="mt-10 lg:mt-8">
+        <DonateBox />
+      </div>
     </div>
   </section>
 );
