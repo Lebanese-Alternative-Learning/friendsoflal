@@ -1,5 +1,6 @@
 import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
+import EducationGuardian from "@/components/sections/EducationGuardian";
 import About from "@/components/sections/About";
 import WhyLAL from "@/components/sections/WhyLAL";
 import HowModel from "@/components/sections/HowModel";
@@ -23,6 +24,7 @@ const Index = () => {
       <Navbar />
       <main className="flex-1">
         <Hero />
+        <EducationGuardian />
         <About />
         <Impact />
         <WhyLAL />
