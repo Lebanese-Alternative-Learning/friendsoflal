@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { donate, childrenSupported } from "@/data/donate";
+import { donate, childrenSupported, checkoutUrlForAmount } from "@/data/donate";
 
 const chipBase =
   "min-h-12 rounded-full border-2 px-5 py-2.5 text-lg font-extrabold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-background focus-visible:ring-offset-2 focus-visible:ring-offset-primary";
@@ -71,7 +71,7 @@ const DonateBox = () => {
       </p>
 
       <a
-        href={amount > 0 ? donate.stripeCheckoutUrl : undefined}
+        href={checkoutUrlForAmount(amount)}
         target="_blank"
         rel="noopener noreferrer"
         aria-disabled={amount <= 0}
