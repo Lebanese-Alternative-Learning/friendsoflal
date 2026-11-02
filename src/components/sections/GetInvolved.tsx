@@ -92,10 +92,9 @@ const GetInvolved = () => {
           {/* Ways to help */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
             {ways.map(({ Icon, label }) => (
-              <button
+              <div
                 key={label}
-                type="button"
-                className="group flex flex-col items-center text-center focus:outline-none"
+                className="flex flex-col items-center text-center"
               >
                 <span className="h-14 w-14 rounded-full bg-brand-magenta/10 flex items-center justify-center">
                   <Icon className="h-6 w-6 text-brand-magenta" strokeWidth={1.75} aria-hidden="true" />
@@ -103,7 +102,7 @@ const GetInvolved = () => {
                 <span className="mt-3 text-sm font-bold text-brand-grey leading-snug md:whitespace-nowrap">
                   {resolve(data, `get-involved-way-${label.toLowerCase().replace(/\s+/g, "-")}`, label)}
                 </span>
-              </button>
+              </div>
             ))}
           </div>
 
