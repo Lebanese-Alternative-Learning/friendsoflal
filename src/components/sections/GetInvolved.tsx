@@ -1,16 +1,9 @@
 import { useState, FormEvent } from "react";
 import { toast } from "sonner";
-import { HandHeart, Users, Megaphone, Mail, Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import { z } from "zod";
 import { useSiteData } from "@/context/SiteDataContext";
 import { resolve } from "@/utils/dataLoader";
-
-const ways = [
-  { Icon: HandHeart, label: "Make a Gift" },
-  { Icon: Users, label: "Partner With Us" },
-  { Icon: Megaphone, label: "Start a Fundraiser" },
-  { Icon: Mail, label: "Subscribe" },
-];
 
 const emailSchema = z
   .string()
@@ -77,36 +70,14 @@ const GetInvolved = () => {
   return (
     <section id="get-involved" className="bg-brand-blue/40 py-14 px-6 md:py-16 md:px-8 scroll-mt-20">
       <div className="container-narrow">
-        <div className="grid grid-cols-1 lg:grid-cols-[245px_1fr_1px_310px] gap-10 lg:gap-8 xl:gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Heading */}
           <div>
             <p className="eyebrow">{resolve(data, "get-involved-eyebrow", "Get Involved")}</p>
             <h2 className="mt-4 text-3xl md:text-4xl font-extrabold text-brand-grey leading-tight">
               {resolve(data, "get-involved-heading", "Be Part of the Change.")}
             </h2>
-            <p className="mt-5 text-sm md:text-base text-brand-grey/85 leading-relaxed">
-              {resolve(data, "get-involved-description", "There are many ways to support education in Lebanon.")}
-            </p>
           </div>
-
-          {/* Ways to help */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
-            {ways.map(({ Icon, label }) => (
-              <div
-                key={label}
-                className="flex flex-col items-center text-center"
-              >
-                <span className="h-14 w-14 rounded-full bg-brand-magenta/10 flex items-center justify-center">
-                  <Icon className="h-6 w-6 text-brand-magenta" strokeWidth={1.75} aria-hidden="true" />
-                </span>
-                <span className="mt-3 text-sm font-bold text-brand-grey leading-snug md:whitespace-nowrap">
-                  {resolve(data, `get-involved-way-${label.toLowerCase().replace(/\s+/g, "-")}`, label)}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          <div aria-hidden="true" className="hidden lg:block h-36 w-px bg-brand-grey/25" />
 
           {/* Subscribe */}
           <div>
