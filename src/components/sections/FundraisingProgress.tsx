@@ -11,7 +11,7 @@ const FundraisingProgress = () => {
   const percent = fundraisingProgress(educationGuardian.raisedAmount, educationGuardian.fundraisingGoal);
 
   return (
-    <div className="mt-8 border-t border-brand-grey/20 pt-6" aria-label="Campaign fundraising totals">
+    <div className="text-left" aria-label="Campaign fundraising totals">
       <p className="flex flex-wrap items-baseline gap-x-2 gap-y-1 text-brand-grey">
         <strong className="text-4xl font-extrabold text-brand-magenta">{dollars.format(educationGuardian.raisedAmount)}</strong>
         <span className="text-base md:text-lg">raised of <strong className="font-extrabold">{dollars.format(educationGuardian.fundraisingGoal)}</strong> goal</span>
