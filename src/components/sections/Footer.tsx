@@ -1,6 +1,7 @@
 import { useSiteData } from "@/context/SiteDataContext";
 import { resolve } from "@/utils/dataLoader";
 import logoAsset from "@/assets/friends-of-lal-logo-footer.png.asset.json";
+import lalLogoAsset from "@/assets/lal-logo-tagline-dark.png.asset.json";
 
 const Footer = () => {
   const data = useSiteData();
@@ -35,6 +36,18 @@ const Footer = () => {
               className="text-white hover:text-brand-blue transition-colors font-semibold"
             >
               {resolve(data, "footer-lal-link", "lal.ngo →")}
+            </a>
+            <a
+              href={resolve(data, "footer-lal-url", "https://lal.ngo")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3"
+            >
+              <img
+                src={lalLogoAsset.url}
+                alt="Lebanese Alternative Learning — Education Through Technology"
+                className="h-10 md:h-12 w-auto"
+              />
             </a>
           </div>
         </div>
