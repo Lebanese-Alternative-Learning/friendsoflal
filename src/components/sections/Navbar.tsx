@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useSiteData } from "@/context/SiteDataContext";
 import { resolve } from "@/utils/dataLoader";
-import logoAsset from "@/assets/friends-of-lal-logo-2.png.asset.json";
+import logoAsset from "@/assets/friends-of-lal-logo-transparent.png.asset.json";
 
 const navLinks = [
   { href: "#about", label: "About" },
