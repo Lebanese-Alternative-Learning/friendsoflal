@@ -1,5 +1,6 @@
 import { educationGuardian } from "@/data/educationGuardian";
 import DonateBox from "@/components/sections/Donate";
+import FundraisingProgress from "@/components/sections/FundraisingProgress";
 
 const EducationGuardian = () => (
   <section id="education-guardian" aria-labelledby="guardian-heading" className="bg-brand-soft section-padding scroll-mt-20">
@@ -24,6 +25,7 @@ const EducationGuardian = () => (
         <p className="mt-4 text-base md:text-lg leading-relaxed text-brand-grey/90">
           It costs LAL just ${educationGuardian.annualCostPerChild} per child to keep Tabshoura running and provide a full year of free learning. Every dollar you give to FLAL is regranted to LAL to keep the Tabshoura platform running.
         </p>
+        <FundraisingProgress />
       </div>
       <div className="flex flex-col gap-8">
         <aside
