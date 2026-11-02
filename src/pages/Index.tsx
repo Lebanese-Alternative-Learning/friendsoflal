@@ -3,7 +3,6 @@ import Hero from "@/components/sections/Hero";
 import EducationGuardian from "@/components/sections/EducationGuardian";
 import About from "@/components/sections/About";
 import WhyLAL from "@/components/sections/WhyLAL";
-import HowModel from "@/components/sections/HowModel";
 import Impact from "@/components/sections/Impact";
 import WhyDonate from "@/components/sections/WhyDonate";
 import Donate from "@/components/sections/Donate";
@@ -30,7 +29,6 @@ const Index = () => {
         <About />
         <Impact />
         <WhyLAL />
-        <HowModel />
         <WhyDonate />
         <Media />
         <GetInvolved />
