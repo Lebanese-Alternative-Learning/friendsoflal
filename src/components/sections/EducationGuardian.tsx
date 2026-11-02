@@ -25,7 +25,7 @@ const EducationGuardian = () => (
       <div className="flex flex-col gap-8">
         <aside
           aria-label="Support this project"
-          className="bg-primary text-primary-foreground rounded-lg p-8 md:p-10 text-center"
+          className="bg-primary text-primary-foreground rounded-lg p-6 md:p-7 text-center"
         >
           <p className="text-3xl md:text-4xl font-extrabold leading-tight">
             ${educationGuardian.annualCostPerChild} = {educationGuardian.learningYears} child learning for{" "}
@@ -34,15 +34,6 @@ const EducationGuardian = () => (
           <p className="mt-4 text-sm md:text-base text-white/85">
             Your gift keeps one child learning on Tabshoura for a full school year.
           </p>
-          <a
-            href={educationGuardian.campaignUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-background px-8 py-4 text-lg font-extrabold uppercase tracking-wide text-primary shadow-md transition-all hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
-          >
-            Support This Project
-          </a>
-          <p className="mt-3 text-xs text-white/80">Checkout opens securely on Stripe in a new tab.</p>
         </aside>
         <DonateBox />
       </div>
