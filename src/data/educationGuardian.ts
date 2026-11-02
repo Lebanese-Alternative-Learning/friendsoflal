@@ -2,5 +2,5 @@ export const educationGuardian = {
   annualCostPerChild: 20,
   learningYears: 1,
   languages: ["Arabic", "French", "English"],
-  campaignUrl: "https://donate.lal.ngo/project/education-guardian",
+  campaignUrl: "https://buy.stripe.com/6oUdR82Za3TX8Rv5Ys3cc00",
 };

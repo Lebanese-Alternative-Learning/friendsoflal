@@ -75,7 +75,7 @@ const GetInvolved = () => {
   };
 
   return (
-    <section id="donate" className="bg-brand-blue/40 py-14 px-6 md:py-16 md:px-8 scroll-mt-20">
+    <section id="get-involved" className="bg-brand-blue/40 py-14 px-6 md:py-16 md:px-8 scroll-mt-20">
       <div className="container-narrow">
         <div className="grid grid-cols-1 lg:grid-cols-[245px_1fr_1px_310px] gap-10 lg:gap-8 xl:gap-10 items-center">
           {/* Heading */}
