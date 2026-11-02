@@ -10,7 +10,8 @@ const EducationGuardian = () => (
         <p className="mt-4 text-lg md:text-xl leading-relaxed text-brand-grey">Give a child a full year of learning today.</p>
       </header>
       <div>
-        <h3 className="text-3xl md:text-4xl font-extrabold leading-tight text-brand-grey">
+        <FundraisingProgress />
+        <h3 className="mt-8 text-3xl md:text-4xl font-extrabold leading-tight text-brand-grey">
           Every Child Has a <span className="text-brand-magenta">Right to Learn.</span>
         </h3>
         <p className="mt-5 text-base md:text-lg leading-relaxed text-brand-grey/90">
@@ -25,7 +26,6 @@ const EducationGuardian = () => (
         <p className="mt-4 text-base md:text-lg leading-relaxed text-brand-grey/90">
           It costs LAL just ${educationGuardian.annualCostPerChild} per child to keep Tabshoura running and provide a full year of free learning. Every dollar you give to FLAL is regranted to LAL to keep the Tabshoura platform running.
         </p>
-        <FundraisingProgress />
       </div>
       <div className="flex flex-col gap-8">
         <aside
