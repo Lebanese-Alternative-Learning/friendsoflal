@@ -66,7 +66,7 @@ const Donate = () => {
       <div className="container-narrow max-w-4xl">
         <p className="eyebrow">{resolve(data, "donate-eyebrow", "Support Education in Lebanon")}</p>
         <h2 id="donate-heading" className="mt-3 text-3xl md:text-4xl font-extrabold text-brand-grey">
-          {resolve(data, "donate-heading", "Choose Your Gift.")}
+          {resolve(data, "donate-title", "Choose Your Gift.")}
         </h2>
 
         {/* Step 1 — amount */}
