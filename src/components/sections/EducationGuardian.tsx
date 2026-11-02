@@ -23,18 +23,7 @@ const EducationGuardian = () => (
           It costs LAL just ${educationGuardian.annualCostPerChild} per child to keep Tabshoura running and provide a full year of free learning.
         </p>
       </div>
-      <aside aria-label="Support a year of learning" className="bg-primary text-primary-foreground p-8 md:p-10 text-center rounded-lg">
-        <p className="text-7xl md:text-8xl font-extrabold leading-none">${educationGuardian.annualCostPerChild}</p>
-        <p className="mt-5 text-lg md:text-xl font-extrabold uppercase">1 child learning for {educationGuardian.learningYears} year</p>
-        <p className="mt-6 text-base md:text-lg leading-relaxed">
-          By giving ${educationGuardian.annualCostPerChild} a year, you become the education guardian of one student, giving them access to quality learning, hope, and a future.
-        </p>
-        <Button asChild variant="outline" size="lg" className="mt-8 w-full min-h-14 h-auto whitespace-normal border-background bg-background text-primary hover:bg-background hover:text-primary rounded-full py-4 font-extrabold text-base">
-          <a href={educationGuardian.campaignUrl} target="_blank" rel="noopener noreferrer">
-            Support This Project <ArrowUpRight aria-hidden="true" />
-          </a>
-        </Button>
-      </aside>
+      <DonateBox />
     </div>
   </section>
 );
