@@ -17,7 +17,7 @@ const Media = () => {
           <div>
             <p className="eyebrow">{resolve(data, "stories-media-eyebrow", "Media")}</p>
             <h2 className="mt-4 text-2xl md:text-3xl font-extrabold text-brand-grey leading-tight">
-              {resolve(data, "stories-media-title", "See Our Work in Action.")}
+              {resolve(data, "stories-media-title", "See LAL in Action.")}
             </h2>
             <p className="mt-5 text-sm text-brand-grey/85 leading-relaxed">
               {resolve(data, "stories-media-subtitle", "Watch videos and photos from our learning spaces across Lebanon.")}
