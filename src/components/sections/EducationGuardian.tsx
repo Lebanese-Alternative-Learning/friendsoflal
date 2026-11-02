@@ -1,5 +1,4 @@
 import { educationGuardian } from "@/data/educationGuardian";
-import DonateBox from "@/components/sections/Donate";
 
 const EducationGuardian = () => (
   <section id="education-guardian" aria-labelledby="guardian-heading" className="bg-brand-soft section-padding scroll-mt-20">
