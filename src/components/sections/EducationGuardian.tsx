@@ -24,7 +24,7 @@ const EducationGuardian = () => (
           Lebanese Alternative Learning (LAL) keeps children learning through <strong className="text-brand-magenta">Tabshoura</strong>, a free digital learning platform offering complete lessons in {educationGuardian.languages.slice(0, -1).join(", ")}, and {educationGuardian.languages.at(-1)}.
         </p>
         <p className="mt-4 text-base md:text-lg leading-relaxed text-brand-grey/90">
-          It costs LAL just ${educationGuardian.annualCostPerChild} per child to keep Tabshoura running and provide a full year of free learning.
+          It costs LAL just ${educationGuardian.annualCostPerChild} per child to keep Tabshoura running and provide a full year of free learning. FLAL makes grants to LAL to keep the Tabshoura platform running.
         </p>
       </div>
       <div className="flex flex-col gap-8">
