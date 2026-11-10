@@ -24,10 +24,10 @@ const Index = () => {
       <main className="flex-1">
         <Hero />
         <EducationGuardian />
-        <About />
-        <Impact />
         <WhyLAL />
+        <Impact />
         <WhyDonate />
+        <About />
         <Media />
         <GetInvolved />
         <FAQ />
