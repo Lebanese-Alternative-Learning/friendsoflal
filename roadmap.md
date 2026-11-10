@@ -7,4 +7,3 @@
 - [x] Point "Support This Project" buttons to the Stripe checkout.
 - [x] Add fundraising total and progress bar beneath the campaign explanation, starting at $0.
 - [x] Reorder homepage: Hero → Education Guardian → Why LAL → Impact → Why Donate → About → Media → Get Involved → FAQ.
-- [ ] Restore "From Donation to Lasting Impact" section (deleted earlier; awaiting user decision).
