@@ -11,7 +11,7 @@ const Media = () => {
   const youtubeId = isYouTube ? extractYouTubeId(mediaImageUrl) : null;
 
   return (
-    <section id="media" className="bg-background py-14 px-6 md:py-16 md:px-8 scroll-mt-20">
+    <section id="media" className="bg-brand-soft py-14 px-6 md:py-16 md:px-8 scroll-mt-20">
       <div className="container-narrow">
         <div className="grid grid-cols-1 gap-7 md:grid-cols-[240px_1fr] md:items-center">
           <div>
