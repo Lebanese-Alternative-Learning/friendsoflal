@@ -5,9 +5,9 @@ import { resolve } from "@/utils/dataLoader";
 import logoAsset from "@/assets/friends-of-lal-logo-transparent.png.asset.json";
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#impact", label: "Impact" },
   { href: "#why-lal", label: "Why LAL" },
+  { href: "#impact", label: "Impact" },
+  { href: "#about", label: "About" },
   { href: "#media", label: "Media" },
   { href: "#faq", label: "FAQ" },
 ];
