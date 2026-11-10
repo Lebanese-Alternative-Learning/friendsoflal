@@ -1,7 +1,6 @@
 import { useSiteData } from "@/context/SiteDataContext";
 import { resolve } from "@/utils/dataLoader";
 import logoAsset from "@/assets/friends-of-lal-logo-footer.png.asset.json";
-import lalLogoAsset from "@/assets/lal-logo-tagline-dark.png.asset.json";
 
 const Footer = () => {
   const data = useSiteData();
@@ -23,32 +22,17 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col gap-2 md:items-end text-sm md:text-base">
-            <a
-              href="mailto:hello@friendsoflal.org"
-              className="text-white hover:text-brand-blue transition-colors font-semibold"
-            >
-              {resolve(data, "footer-email", "hello@friendsoflal.org")}
-            </a>
-            <a
-              href={resolve(data, "footer-lal-url", "https://lal.ngo")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-brand-blue transition-colors font-semibold"
-            >
-              {resolve(data, "footer-lal-link", "lal.ngo →")}
-            </a>
-            <a
-              href={resolve(data, "footer-lal-url", "https://lal.ngo")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3"
-            >
-              <img
-                src={lalLogoAsset.url}
-                alt="Lebanese Alternative Learning — Education Through Technology"
-                className="h-10 md:h-12 w-auto"
-              />
-            </a>
+            <p className="flex flex-wrap items-baseline gap-x-2">
+              <span className="text-white/75 font-semibold">
+                {resolve(data, "footer-email-label", "Contact Us:")}
+              </span>
+              <a
+                href="mailto:hello@friendsoflal.org"
+                className="text-white hover:text-brand-blue transition-colors font-semibold"
+              >
+                {resolve(data, "footer-email", "hello@friendsoflal.org")}
+              </a>
+            </p>
           </div>
         </div>
 
