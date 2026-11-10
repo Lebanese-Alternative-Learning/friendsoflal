@@ -23,12 +23,17 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col gap-2 md:items-end text-sm md:text-base">
-            <a
-              href="mailto:hello@friendsoflal.org"
-              className="text-white hover:text-brand-blue transition-colors font-semibold"
-            >
-              {resolve(data, "footer-email", "hello@friendsoflal.org")}
-            </a>
+            <p className="flex flex-wrap items-baseline gap-x-2">
+              <span className="text-white/75 font-semibold">
+                {resolve(data, "footer-email-label", "Contact Us:")}
+              </span>
+              <a
+                href="mailto:hello@friendsoflal.org"
+                className="text-white hover:text-brand-blue transition-colors font-semibold"
+              >
+                {resolve(data, "footer-email", "hello@friendsoflal.org")}
+              </a>
+            </p>
             <a
               href={resolve(data, "footer-lal-url", "https://lal.ngo")}
               target="_blank"
