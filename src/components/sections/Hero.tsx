@@ -27,7 +27,7 @@ const Hero = () => {
             {resolve(data, "hero-header", "Every Child Deserves the Chance to Learn.")}
           </h1>
           <p className="mt-6 text-lg md:text-xl text-brand-grey/85 leading-relaxed max-w-2xl mx-auto">
-            {resolve(data, "hero-subtitle", "Friends of Lebanese Alternative Learning funds free, quality education for every child in Lebanon — through technology, in school and out.")}
+            {resolve(data, "hero-subtitle", "Friends of Lebanese Alternative Learning funds free, quality education for every child in Lebanon through technology, in school and out.")}
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
