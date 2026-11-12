@@ -2,6 +2,9 @@ export const educationGuardian = {
   annualCostPerChild: 20,
   learningYears: 1,
   languages: ["Arabic", "French", "English"],
+  // Offline fallback: the gifts banked before automated tracking began. The
+  // database seeds the same figure as its baseline row, so the live total and
+  // this number agree until the backend is unreachable.
   raisedAmount: 8797,
   // Initial goal mirrors the original LAL campaign reference, pending FLAL confirmation.
   fundraisingGoal: 60000,
