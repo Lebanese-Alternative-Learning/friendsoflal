@@ -8,4 +8,5 @@
 - [x] Add fundraising total and progress bar beneath the campaign explanation, starting at $0.
 - [x] Reorder homepage: Hero → Education Guardian → Why LAL → Impact → Why Donate → About → Media → Get Involved → FAQ.
 - [x] Put "Contact Us:" in front of the footer email address.
+- [ ] Automate the fundraising total from Stripe instead of typing it by hand.
 - [x] Remove the lal.ngo text link and the LAL logo link from the footer.

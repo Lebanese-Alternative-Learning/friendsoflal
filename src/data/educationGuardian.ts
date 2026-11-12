@@ -2,7 +2,7 @@ export const educationGuardian = {
   annualCostPerChild: 20,
   learningYears: 1,
   languages: ["Arabic", "French", "English"],
-  raisedAmount: 1000,
+  raisedAmount: 8797,
   // Initial goal mirrors the original LAL campaign reference, pending FLAL confirmation.
   fundraisingGoal: 60000,
   campaignUrl: "https://buy.stripe.com/6oUdR82Za3TX8Rv5Ys3cc00",

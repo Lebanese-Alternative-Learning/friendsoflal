@@ -7,9 +7,9 @@ describe("Education Guardian campaign", () => {
     expect(educationGuardian.learningYears).toBe(1);
   });
 
-  it("shows the confirmed $1,000 raised", () => {
-    expect(educationGuardian.raisedAmount).toBe(1000);
-    expect(fundraisingProgress(educationGuardian.raisedAmount, educationGuardian.fundraisingGoal)).toBeCloseTo(1000 / 60000 * 100, 6);
+  it("shows the confirmed $8,797 raised", () => {
+    expect(educationGuardian.raisedAmount).toBe(8797);
+    expect(fundraisingProgress(educationGuardian.raisedAmount, educationGuardian.fundraisingGoal)).toBeCloseTo(8797 / 60000 * 100, 6);
   });
 
   it("calculates progress and caps it at the goal", () => {
