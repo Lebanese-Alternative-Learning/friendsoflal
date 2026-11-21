@@ -5,7 +5,6 @@ import About from "@/components/sections/About";
 import WhyLAL from "@/components/sections/WhyLAL";
 import Impact from "@/components/sections/Impact";
 import WhyDonate from "@/components/sections/WhyDonate";
-import Media from "@/components/sections/Media";
 import GetInvolved from "@/components/sections/GetInvolved";
 import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/sections/Footer";
@@ -28,7 +27,6 @@ const Index = () => {
         <Impact />
         <WhyDonate />
         <About />
-        <Media />
         <GetInvolved />
         <FAQ />
       </main>
